@@ -35,22 +35,25 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="12"
-        android:textSize="17sp"
+        android:ems="13"
+        android:textSize="18sp"
         android:inputType="number"
         android:hint="请输入学号"
+        android:maxLength="8"
+        android:digits="0123456789"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="12"
-        android:textSize="17sp"
+        android:ems="13"
+        android:textSize="18sp"
         android:inputType="textPassword"
         android:hint="请输入密码"
         app:layout_constraintRight_toRightOf="parent"
@@ -88,54 +91,55 @@
         android:layout_height="30dp"
         android:orientation="horizontal"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText1"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="90dp">
+        android:layout_marginTop="20dp">
 
         <RadioButton
             android:id="@+id/radioButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:checked="true"
-            app:layout_constraintLeft_toLeftOf="@+id/radioButton"
+            app:layout_constraintRight_toLeftOf="@+id/radioButton"
             android:text="学生" />
         <RadioButton
             android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:layout_constraintLeft_toLeftOf="@+id/radioButton1"
+            app:layout_constraintLeft_toRightOf="@id/radioButton1"
             android:layout_marginLeft="10dp"
             android:text="教职工"
             android:textSize="18sp"/>
     </RadioGroup>
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="登录"
-        android:textColor="@color/colorwhite"        android:textSize="18sp"
+        android:textSize="18sp"
+        android:textColor="@color/colorwhite"
+        android:background="@drawable/resource"
         app:layout_constraintTop_toBottomOf="@id/radiogroup"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/resource"/>
+        app:layout_constraintRight_toLeftOf="@+id/test"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp" />
+
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/resource"
         android:text="注册"
         android:textColor="@color/colorwhite"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/radiogroup"
-        app:layout_constraintLeft_toRightOf="@+id/button"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/resource"/>
-
-
+        app:layout_constraintBaseline_toBaselineOf="@id/button"
+        app:layout_constraintLeft_toRightOf="@id/button"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
